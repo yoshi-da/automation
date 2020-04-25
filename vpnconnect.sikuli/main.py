@@ -6,7 +6,7 @@ import time
 
 # read config
 inifile = configparser.ConfigParser()
-inifile.read('/Users/yoshidatatsuya/Documents/GitHub/automation/vpnconnect.sikuli/config.ini','utf-8')
+inifile.read('config.ini','utf-8')
 
 # get onetime password
 url = inifile.get('ePass','url')
