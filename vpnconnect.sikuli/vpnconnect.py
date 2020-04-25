@@ -20,16 +20,16 @@ print('click connect button')
 #sleep(3)
 
 region_2 = Region(-937,139,77,27)
-if region_2.exists("images/1587486153657.png"):
-    region_2.click("images/1587486153657.png")
+if region_2.exists("images/next.png"):
+    region_2.click("images/next.png")
     print('click next button')
 
 region_3 = Region(-1160,66,398,151)
-region_3.paste("images/1587564025272.png",password)
+region_3.paste("images/textbox4pass.png",password)
 print('paste password')
 sleep(1)
 
-region_3.click("images/loginbutton.png")
+region_3.click("images/login.png")
 print('click login button')
 
 region_1.exists("images/Disconnect.png",60)
@@ -43,5 +43,5 @@ app2.open()
 sleep(5)
 
 region_4 = Region(-1498,43,179,147)
-region_4.click("images/1587790005531.png")
+region_4.click("images/desktopicon.png")
 sleep(5)
