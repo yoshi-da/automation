@@ -2,7 +2,8 @@ import configparser
 
 # read config
 inifile = configparser.ConfigParser()
-inifile.read('/Users/yoshidatatsuya/Documents/GitHub/automation/vpnconnect.sikuli/config.ini','utf-8')
+#inifile.read('/Users/yoshidatatsuya/Documents/GitHub/automation/vpnconnect.sikuli/config.ini','utf-8')
+inifile.read('config.ini','utf-8')
 
 ### connect to VPN
 password = App.getClipboard()
