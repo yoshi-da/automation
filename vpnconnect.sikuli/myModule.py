@@ -6,8 +6,8 @@ def getepass(url,username,prefix,row,col):
     url = url
     username = username
     prefix = prefix
-    row = row  # 1-8  
-    col = col # 1-13
+    row = row
+    col = col
 
     # get HTML
     urlparams = {'USERNAME':username}

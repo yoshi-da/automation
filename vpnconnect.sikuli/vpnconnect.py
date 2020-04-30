@@ -6,7 +6,7 @@ inifile.read('config.ini','utf-8')
 
 ### connect to VPN
 password = App.getClipboard()
-print(password)
+print("copy one-time password to clopboard")
 
 sonicwall = inifile.get('sikuli','sonicwall')
 print(sonicwall)
@@ -35,13 +35,29 @@ print('click login button')
 region_1.exists("images/Disconnect.png",60)
 print('vpn connect is established')
 
-### signIn to StoreWeb
+### run citrix workspace
 citrix = inifile.get('sikuli','citrix')
 print(citrix)
 app2 = App(citrix)
 app2.open()
 sleep(5)
 
-region_4 = Region(-1498,43,179,147)
+region_4 = Region(-1515,-106,214,363)
+region_4.click("images/desktopicon.png") 
+sleep(1)
 region_4.click("images/desktopicon.png")
+sleep(1)
+#region_4.click("images/desktopicon.png")
+#sleep(1)
+
+### run MS remote desktop
+rdp = inifile.get('sikuli','rdp')
+print(rdp)
+app3 = App(rdp)
+app3.open()
+sleep(4)
+
+region_5 = Region(286,87,596,163)
+region_5.doubleClick("images/desktopview.png")
 sleep(5)
+
